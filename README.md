@@ -2,12 +2,19 @@
 非官方小米路由器远程下载
 
 全部封装在mi_route类中，使用范例放在最下面三行中
+```python
 route = mi_route('你的账号', '你的密码')
 result = route.download('http://v.gorouter.info/20131204/100个梦想的赞助商（微电影）.mp4')
 print(result)
+```
 
 如果print结果类似于
-{"S":"OK","R":"{\"decodedUrl\":\"http://v.gorouter.info/20131204/100个梦想的赞助商（微电影）.mp4\",\"fileName\":\"100个梦想的赞助商（微电影）.mp4\"}"}
+```json
+{
+  "S":"OK",
+  "R":"{\"decodedUrl\":\"http://v.gorouter.info/20131204/100个梦想的赞助商（微电影）.mp4\",\"fileName\":\"100个梦想的赞助商（微电影）.mp4\"}"
+}
+```
 则说明下载成功
 python版本3.5.1，依赖requests库
 
